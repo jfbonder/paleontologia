@@ -190,7 +190,7 @@ body.menu-open { overflow: hidden; }
 	background: radial-gradient(ellipse at 50% 45%, rgba(27, 20, 17, .62), rgba(27, 20, 17, .28) 75%), linear-gradient(0deg, rgba(31, 52, 58, .55), transparent 45%);
 }
 @keyframes slow-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
-.hero__credit { position: absolute; right: 14px; bottom: 8px; margin: 0; font-size: .7rem; color: rgba(255,255,255,.75); text-shadow: 0 1px 4px rgba(0,0,0,.6); }
+.hero .hero__credit { position: absolute; max-width: none; right: 14px; bottom: 8px; margin: 0; font-size: .7rem; color: rgba(255,255,255,.75); text-shadow: 0 1px 4px rgba(0,0,0,.6); }
 .hero__credit a { color: inherit; }
 .hero__content { padding: 60px 24px; max-width: 760px; }
 .hero h1 {
@@ -253,6 +253,12 @@ section { position: relative; }
 .figure-photo figcaption { font-size: .74rem; color: var(--ink-soft); margin-top: 8px; }
 .figure-photo figcaption a { color: inherit; }
 .offset-frame::after { bottom: 8px; }
+@media (max-width: 700px) {
+	/* en celular: sin marco desplazado (se salía de la pantalla) y crédito de la portada más discreto */
+	.offset-frame::after { display: none; }
+	.hero__scroll { display: none; }
+	.hero .hero__credit { left: 12px; right: 12px; text-align: center; font-size: .62rem; }
+}
 
 /* Ilustración provisoria en lugar de foto */
 .figure-placeholder {
