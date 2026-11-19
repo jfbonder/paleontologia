@@ -2,11 +2,16 @@
 # Descarga los archivos del sitio viejo de Paleontología (paleo.gl.fcen.uba.ar)
 # y los deja ordenados en ./archivos/ con los nombres que usa el sitio nuevo.
 # Uso: bash descargar_archivos.sh
+# Se puede volver a correr en la misma carpeta: solo baja lo que falta.
 set -u
-ok=0; fallas=()
+ok=0; saltados=0; fallas=()
 bajar() {
-  local url="$1" destino="archivos/$2" tmp
+  local url="$1" destino="archivos/$2" tmp existente
   mkdir -p "$(dirname "$destino")"
+  # si ya se descargó antes (con cualquier extensión), no lo vuelve a bajar
+  for existente in "$destino".*; do
+    if [ -s "$existente" ]; then saltados=$((saltados+1)); return; fi
+  done
   tmp="$(mktemp)"
   if curl -fsSL --retry 2 -o "$tmp" "$url"; then
     case "$(file -b --mime-type "$tmp")" in
@@ -168,5 +173,5 @@ bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/300/129/" "actas
 bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/303/129/" "actas/2015-sin-titulo"
 
 echo
-echo "Listo: $ok archivos descargados en ./archivos/"
+echo "Listo: $ok archivos nuevos descargados, $saltados ya estaban (en ./archivos/)"
 if [ ${#fallas[@]} -gt 0 ]; then echo "Fallaron ${#fallas[@]}:"; printf "  - %s\n" "${fallas[@]}"; fi
