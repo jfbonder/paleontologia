@@ -1,5 +1,7 @@
 # Archivos a migrar desde el sitio viejo
 
+> **Migración completa (noviembre 2026).** Todos los archivos ya están en `archivos/`. Esta tabla queda como referencia del origen de cada documento. Notas: los dos reglamentos de tesis (n.º 266 y 281) eran idénticos y se dejó uno; el n.º 447 («Electromagnetismo y Óptica») era en realidad la Res. CD 1911/2023; el archivo sin título de 2015 (n.º 303) es el acta del 26/02/2015; las fechas marcadas con ⚠️ se verificaron con el contenido de cada acta.
+
 Son **142 archivos** que hoy están en `paleo.gl.fcen.uba.ar` (sitio solo `http`, que no se puede leer desde el entorno de desarrollo).
 
 ## Opción rápida: script automático
