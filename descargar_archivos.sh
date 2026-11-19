@@ -172,6 +172,9 @@ bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/277/129/" "actas
 bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/300/129/" "actas/2014-carta-4th-international-palaeontological-congress"
 bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/303/129/" "actas/2015-sin-titulo"
 
+bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/383/154/" "doctorado/reglamento-doctorado-fcen-2021"
+bajar "http://paleo.gl.fcen.uba.ar/index.php/download_file/view/384/154/" "doctorado/resolucion-coneau-acreditacion"
+
 echo
 echo "Listo: $ok archivos nuevos descargados, $saltados ya estaban (en ./archivos/)"
 if [ ${#fallas[@]} -gt 0 ]; then echo "Fallaron ${#fallas[@]}:"; printf "  - %s\n" "${fallas[@]}"; fi

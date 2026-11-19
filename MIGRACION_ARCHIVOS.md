@@ -1,6 +1,6 @@
 # Archivos a migrar desde el sitio viejo
 
-> **Migración completa (noviembre 2026).** Todos los archivos ya están en `archivos/`. Esta tabla queda como referencia del origen de cada documento. Notas: los dos reglamentos de tesis (n.º 266 y 281) eran idénticos y se dejó uno; el n.º 447 («Electromagnetismo y Óptica») era en realidad la Res. CD 1911/2023; el archivo sin título de 2015 (n.º 303) es el acta del 26/02/2015; las fechas marcadas con ⚠️ se verificaron con el contenido de cada acta.
+> **Migración casi completa (noviembre 2026).** Todos los archivos ya están en `archivos/`, salvo los dos del doctorado agregados al final de la tabla. Esta tabla queda como referencia del origen de cada documento. Notas: los dos reglamentos de tesis (n.º 266 y 281) eran idénticos y se dejó uno; el n.º 447 («Electromagnetismo y Óptica») era en realidad la Res. CD 1911/2023; el archivo sin título de 2015 (n.º 303) es el acta del 26/02/2015; las fechas marcadas con ⚠️ se verificaron con el contenido de cada acta.
 
 Son **142 archivos** que hoy están en `paleo.gl.fcen.uba.ar` (sitio solo `http`, que no se puede leer desde el entorno de desarrollo).
 
@@ -164,3 +164,5 @@ Las filas marcadas con ⚠️ tienen algo para verificar (ver columna "Nota").
 | 140 | `archivos/actas/2013-elecciones-estudiantes` | Acta de elecciones de estudiantes 2013 | [277](http://paleo.gl.fcen.uba.ar/index.php/download_file/view/277/129/) |  |
 | 141 | `archivos/actas/2014-carta-4th-international-palaeontological-congress` | Carta 4th International Palaeontological Congress (2014) | [300](http://paleo.gl.fcen.uba.ar/index.php/download_file/view/300/129/) |  |
 | 142 | `archivos/actas/2015-sin-titulo` | Archivo sin título en la lista de actas 2015 | [303](http://paleo.gl.fcen.uba.ar/index.php/download_file/view/303/129/) | ⚠️ VERIFICAR: el link no tiene texto; abrirlo para ver qué es |
+| 143 | `archivos/doctorado/reglamento-doctorado-fcen-2021` | Reglamento de Doctorado de la FCEN-UBA (2021) | [383](http://paleo.gl.fcen.uba.ar/index.php/download_file/view/383/154/) | Agregado después: viene de la página del doctorado |
+| 144 | `archivos/doctorado/resolucion-coneau-acreditacion` | Resolución CONEAU de acreditación del Doctorado, Área Paleontología | [384](http://paleo.gl.fcen.uba.ar/index.php/download_file/view/384/154/) | Agregado después: viene de la página del doctorado |
