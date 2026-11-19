@@ -35,7 +35,7 @@ var PLAN = {
 			programa: "archivos/programas/biodiversidad-de-animales.pdf", nota: "Quienes aprueben Introducción a la Zoología de la carrera de Biología obtienen la equivalencia." },
 		{ id: "gg", nombre: "Geología General", horas: 128, anio: 1, cuatri: 2, area: "geo", correl: ["cbc"] },
 		{ id: "fis", nombre: "Física para Paleontólogos", corto: "Física para Paleontólogos", horas: 160, anio: 1, cuatri: 2, area: "basicas", correl: ["cbc"],
-			programa: "archivos/programas/electromagnetismo-y-optica.pdf",
+			programa: "archivos/programas/fisica-para-paleontologos.pdf",
 			nota: "Actualmente reemplazada por la asignatura «Electromagnetismo y Óptica» del plan de Biología (Res. CD 1911/2023).",
 			resolucion: "archivos/resoluciones/res-cd-1911-2023.pdf" },
 
