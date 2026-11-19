@@ -252,7 +252,9 @@ section { position: relative; }
 .figure-photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); background: var(--sand); }
 .figure-photo figcaption { font-size: .74rem; color: var(--ink-soft); margin-top: 8px; }
 .figure-photo figcaption a { color: inherit; }
-.offset-frame::after { bottom: 8px; }
+/* con foto: el marco termina 18px debajo de la imagen y el crédito queda afuera, debajo del marco */
+.offset-frame .figure-photo figcaption { margin-top: 30px; line-height: 18px; }
+.offset-frame:has(.figure-photo)::after { bottom: 30px; }
 @media (max-width: 700px) {
 	/* en celular: sin marco desplazado (se salía de la pantalla) y crédito de la portada más discreto */
 	.offset-frame::after { display: none; }
