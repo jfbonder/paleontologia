@@ -419,6 +419,13 @@ a.card { text-decoration: none; color: inherit; display: block; }
 .steps p { margin: 0; color: var(--ink-soft); }
 
 /* Personas (Comisión de Carrera) */
+.director { display: flex; align-items: center; gap: 22px; }
+.director__photo { width: 104px; height: 104px; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 4px var(--sand); }
+.director h3 { font-size: 1.4rem; margin: 0 0 .3em; }
+.director .eyebrow { margin-bottom: .5em; }
+.director__credit { display: block; font-size: .72rem; color: var(--ink-soft); }
+.director__credit a { color: inherit; }
+@media (max-width: 480px) { .director__photo { width: 76px; height: 76px; } .director h3 { font-size: 1.15rem; } }
 .people { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; list-style: none; padding: 0; margin: 0 0 1em; }
 .person { display: flex; gap: 14px; align-items: center; background: var(--white); border: 1px solid var(--sand-strong); border-radius: var(--radius); padding: 14px; }
 .person__avatar {
