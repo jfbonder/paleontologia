@@ -271,6 +271,8 @@ section { position: relative; }
 .figure-portrait b { display: block; font-family: var(--font-display); font-size: 1.2rem; color: var(--slate); }
 .figure-portrait small { font-size: .72rem; color: var(--ink-soft); }
 .figure-portrait a { color: inherit; }
+.figure-portrait--illus { gap: 10px; }
+.figure-portrait--illus img { width: auto; height: 74%; border: 0; border-radius: 6px; }
 
 /* Foto ancha debajo del título de una página */
 .photo-banner { padding: 0 0 40px; }
