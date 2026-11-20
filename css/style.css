@@ -262,6 +262,14 @@ section { position: relative; }
 	.hero .hero__credit { left: 12px; right: 12px; text-align: center; font-size: .62rem; }
 }
 
+/* Foto ancha debajo del título de una página */
+.photo-banner { padding: 0 0 40px; }
+.figure-banner { margin: 0; }
+.figure-banner img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 8; object-fit: cover; object-position: center 60%; border-radius: var(--radius); background: var(--sand); }
+.figure-banner figcaption { font-size: .74rem; color: var(--ink-soft); margin-top: 8px; text-align: right; }
+.figure-banner figcaption a { color: inherit; }
+@media (max-width: 700px) { .figure-banner img { aspect-ratio: 4 / 3; } }
+
 /* Ilustración provisoria en lugar de foto */
 .figure-placeholder {
 	margin: 0;
