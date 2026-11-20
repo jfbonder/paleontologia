@@ -18,7 +18,13 @@ Es un sitio **estático** (HTML, CSS y JavaScript, sin frameworks ni compilació
 
 ## Cómo editar
 
-- **Textos**: directamente en cada archivo `.html`. El encabezado, el menú y el pie se repiten en todas las páginas: si se cambia un ítem del menú, hay que cambiarlo en los 8 archivos.
+- **Textos**: hay dos formas.
+  - *Cambios chicos*: directamente en el archivo `.html` de la página.
+  - *Cambios en el menú, el encabezado o el pie, o en varias páginas a la vez*: editar `_fuente/paginas.py` (contenido) o `_fuente/build.py` (menú, encabezado y pie) y regenerar todas las páginas con
+    ```bash
+    python3 _fuente/build.py
+    ```
+    Ojo: al regenerar se pisan los `.html`, así que un cambio hecho a mano en un `.html` hay que pasarlo también a `_fuente/paginas.py`.
 - **Plan de estudios** (materias, horas, correlatividades, equivalencias): **solo** en el bloque de datos al principio de `js/plan.js`. Con esos datos se dibujan el diagrama y la tabla de `carrera.html`.
 - **Colores y tipografías**: variables al principio de `css/style.css` (`:root`).
 - **Ilustraciones de fósiles**: `imgs/fosiles.svg`. Son provisorias y ocupan el lugar de las fotos (los recuadros dicen «Foto: … (provisoria)»).
