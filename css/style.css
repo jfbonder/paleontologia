@@ -107,7 +107,6 @@ p { margin: 0 0 1em; }
 .wordmark { display: inline-flex; flex-direction: column; text-decoration: none; color: var(--slate); line-height: 1; }
 .wordmark small { font-size: .78rem; letter-spacing: .02em; margin-bottom: 4px; }
 .wordmark b { font-family: var(--font-display); font-size: 1.7rem; font-weight: 600; color: var(--terracotta); letter-spacing: -.01em; }
-.wordmark b i { font-style: normal; color: var(--slate); }
 .logos__divider { width: 1px; align-self: stretch; margin: 18px 0; background: var(--ink); opacity: .5; }
 .logo-exactas { height: 15px; width: auto; display: block; }
 @media (max-width: 600px) {
@@ -538,7 +537,6 @@ tbody tr:last-child td { border-bottom: 0; }
 .site-footer li { margin-bottom: .5em; }
 .site-footer .wordmark { color: #d9cfc3; }
 .site-footer .wordmark b { color: #f0b48f; }
-.site-footer .wordmark b i { color: var(--white); }
 .footer-contact { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; word-break: break-all; }
 .footer-contact svg { width: 18px; height: 18px; flex: none; }
 .footer-bottom {
