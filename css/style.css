@@ -342,6 +342,7 @@ section { position: relative; }
 .card h3 { font-size: 1.15rem; color: var(--slate); }
 .card p { color: var(--ink-soft); font-size: .97rem; margin-bottom: 0; }
 .card__icon { width: 54px; height: 54px; color: var(--terracotta); margin-bottom: 14px; }
+.card__icon--wide { width: 110px; }
 .card__num {
 	font-family: var(--font-display); font-style: italic; font-size: 2.4rem; line-height: 1; color: var(--terracotta); display: block; margin-bottom: 8px;
 }
