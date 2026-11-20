@@ -8,7 +8,7 @@
 # - archivos.py  la lista de documentos migrados del sitio viejo (actas, programas, etc.)
 #
 # El plan de estudios (materias, horas, correlatividades) NO está acá: está en js/plan.js.
-import sys, os, html
+import sys, os, html, re
 sys.path.insert(0, os.path.dirname(__file__))
 import archivos as A
 from paginas import PAGINAS
@@ -172,6 +172,8 @@ def build():
         for s in p.get('scripts', []):
             out += f'<script src="{s}"></script>\n'
         out += '</body>\n</html>\n'
+        # direcciones de correo visibles: si no entran en una línea, cortar solo después de la @
+        out = re.sub(r'>([A-Za-z0-9._%+-]+)@([A-Za-z0-9.-]+\.[a-z]{2,})<', r'>\1@<wbr>\2<', out)
         open(R + p['slug'] + '.html', 'w').write(out)
         print('ok', p['slug'])
 

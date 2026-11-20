@@ -213,6 +213,7 @@ body.menu-open { overflow: hidden; }
 	transition: background .2s, color .2s, transform .2s;
 }
 .btn svg { width: 18px; height: 18px; flex: none; }
+@media (max-width: 480px) { .btn { font-size: .9rem; padding: 12px 16px; } }
 .btn--primary { background: linear-gradient(90deg, var(--terracotta), var(--terracotta-dark)); color: var(--white); }
 .btn--primary:hover { color: var(--white); transform: translateY(-1px); }
 .btn--light { background: rgba(255, 255, 255, .12); border-color: rgba(255, 255, 255, .6); color: var(--white); }
@@ -566,20 +567,21 @@ tbody tr:last-child td { border-bottom: 0; }
 .site-footer { background: var(--ink); color: #d9cfc3; padding: 70px 0 30px; margin-top: 0; font-size: .95rem; }
 .site-footer a { color: #f6d9a8; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; color: var(--white); }
-.footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 40px; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 40px; }
 .site-footer h4 { color: var(--white); font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
 .site-footer ul { list-style: none; margin: 0; padding: 0; }
 .site-footer li { margin-bottom: .5em; }
 .site-footer .wordmark { color: #d9cfc3; }
 .site-footer .wordmark b { color: #f0b48f; }
-.footer-contact { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; word-break: break-all; }
+.footer-contact { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: .9rem; }
 .footer-contact svg { width: 18px; height: 18px; flex: none; }
 .footer-bottom {
 	margin-top: 50px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .15);
 	display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: .85rem; color: #a99d90;
 }
 .footer-bottom img { height: 14px; filter: invert(1); opacity: .8; }
-@media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 1100px) { .footer-grid { grid-template-columns: 1fr 1fr 1fr; } .footer-grid > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Animación de aparición ---------- */
