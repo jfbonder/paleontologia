@@ -8,7 +8,7 @@
      id        identificador corto (sin espacios)
      nombre    nombre de la materia
      horas     carga horaria total
-     anio      año del plan (1 a 5)
+     anio      año de la carrera (2 a 6: el 1.º año es el CBC)
      cuatri    1 o 2 (primer o segundo cuatrimestre)
      area      paleo | geo | bio | basicas | atm   (define el color)
      correl    lista de ids de las correlativas ("cbc" = Ciclo Básico Común)
@@ -25,72 +25,72 @@ var PLAN = {
 	},
 	materias: [
 		// ---- Primer año ----
-		{ id: "ibm", nombre: "Introducción a la Biología Molecular para Paleontólogos", corto: "Int. a la Biología Molecular", horas: 160, anio: 1, cuatri: 1, area: "bio", correl: ["cbc"],
+		{ id: "ibm", nombre: "Introducción a la Biología Molecular para Paleontólogos", corto: "Int. a la Biología Molecular", horas: 160, anio: 2, cuatri: 1, area: "bio", correl: ["cbc"],
 			programa: "archivos/programas/introduccion-biologia-molecular.pdf", nota: "Quienes aprueben Introducción a la Biología Molecular y Celular (IBMC) de la carrera de Biología obtienen la equivalencia." },
-		{ id: "icao", nombre: "Introducción a las Ciencias de la Atmósfera y los Océanos", corto: "Cs. de la Atmósfera y los Océanos", horas: 128, anio: 1, cuatri: 1, area: "atm", correl: ["cbc"],
+		{ id: "icao", nombre: "Introducción a las Ciencias de la Atmósfera y los Océanos", corto: "Cs. de la Atmósfera y los Océanos", horas: 128, anio: 2, cuatri: 1, area: "atm", correl: ["cbc"],
 			programa: "archivos/programas/introduccion-ciencias-atmosfera-oceanos.pdf" },
-		{ id: "bv", nombre: "Biodiversidad de Vegetales", horas: 160, anio: 1, cuatri: 1, area: "bio", correl: ["cbc"],
+		{ id: "bv", nombre: "Biodiversidad de Vegetales", horas: 160, anio: 2, cuatri: 1, area: "bio", correl: ["cbc"],
 			programa: "archivos/programas/biodiversidad-de-vegetales.pdf", nota: "Quienes aprueben Introducción a la Botánica de la carrera de Biología obtienen la equivalencia." },
-		{ id: "ba", nombre: "Biodiversidad de Animales", horas: 160, anio: 1, cuatri: 2, area: "bio", correl: ["cbc"],
+		{ id: "ba", nombre: "Biodiversidad de Animales", horas: 160, anio: 2, cuatri: 2, area: "bio", correl: ["cbc"],
 			programa: "archivos/programas/biodiversidad-de-animales.pdf", nota: "Quienes aprueben Introducción a la Zoología de la carrera de Biología obtienen la equivalencia." },
-		{ id: "gg", nombre: "Geología General", horas: 128, anio: 1, cuatri: 2, area: "geo", correl: ["cbc"] },
-		{ id: "fis", nombre: "Física para Paleontólogos", corto: "Física para Paleontólogos", horas: 160, anio: 1, cuatri: 2, area: "basicas", correl: ["cbc"],
+		{ id: "gg", nombre: "Geología General", horas: 128, anio: 2, cuatri: 2, area: "geo", correl: ["cbc"] },
+		{ id: "fis", nombre: "Física para Paleontólogos", corto: "Física para Paleontólogos", horas: 160, anio: 2, cuatri: 2, area: "basicas", correl: ["cbc"],
 			programa: "archivos/programas/fisica-para-paleontologos.pdf",
 			nota: "Actualmente reemplazada por la asignatura «Electromagnetismo y Óptica» del plan de Biología (Res. CD 1911/2023).",
 			resolucion: "archivos/resoluciones/res-cd-1911-2023.pdf" },
 
 		// ---- Segundo año ----
-		{ id: "biom", nombre: "Biometría", horas: 120, anio: 2, cuatri: 1, area: "basicas", correl: ["ba", "bv"],
+		{ id: "biom", nombre: "Biometría", horas: 120, anio: 3, cuatri: 1, area: "basicas", correl: ["ba", "bv"],
 			programa: "archivos/programas/biometria.pdf" },
-		{ id: "paleo", nombre: "Paleontología", horas: 160, anio: 2, cuatri: 1, area: "paleo", correl: ["ba", "bv", "gg"],
+		{ id: "paleo", nombre: "Paleontología", horas: 160, anio: 3, cuatri: 1, area: "paleo", correl: ["ba", "bv", "gg"],
 			programa: "archivos/programas/paleontologia.pdf" },
-		{ id: "pbot", nombre: "Paleobotánica", horas: 160, anio: 2, cuatri: 2, area: "paleo", correl: ["paleo"],
+		{ id: "pbot", nombre: "Paleobotánica", horas: 160, anio: 3, cuatri: 2, area: "paleo", correl: ["paleo"],
 			programa: "archivos/programas/paleobotanica.pdf" },
-		{ id: "fse", nombre: "Fundamentos de Sedimentología y Estratigrafía", corto: "Fund. Sedimentología y Estratigrafía", horas: 90, anio: 2, cuatri: 2, area: "geo", correl: ["gg"] },
-		{ id: "qg", nombre: "Química General e Inorgánica para Paleontólogos", corto: "Química General e Inorgánica", horas: 192, anio: 2, cuatri: 2, area: "basicas", correl: ["cbc"],
+		{ id: "fse", nombre: "Fundamentos de Sedimentología y Estratigrafía", corto: "Fund. Sedimentología y Estratigrafía", horas: 90, anio: 3, cuatri: 2, area: "geo", correl: ["gg"] },
+		{ id: "qg", nombre: "Química General e Inorgánica para Paleontólogos", corto: "Química General e Inorgánica", horas: 192, anio: 3, cuatri: 2, area: "basicas", correl: ["cbc"],
 			programa: "archivos/programas/quimica-general-e-inorganica.pdf",
 			nota: "Se otorga equivalencia a quienes aprueben Química General e Inorgánica I del plan de Biología (Res. CD 2510/2017).",
 			resolucion: "archivos/resoluciones/res-cd-2510-2017.pdf" },
 
 		// ---- Tercer año ----
-		{ id: "qo", nombre: "Química Orgánica para Paleontólogos", corto: "Química Orgánica", horas: 160, anio: 3, cuatri: 1, area: "basicas", correl: ["qg"],
+		{ id: "qo", nombre: "Química Orgánica para Paleontólogos", corto: "Química Orgánica", horas: 160, anio: 4, cuatri: 1, area: "basicas", correl: ["qg"],
 			programa: "archivos/programas/quimica-organica.pdf", nota: "Quienes aprueben Química Orgánica de la carrera de Biología obtienen la equivalencia." },
-		{ id: "as", nombre: "Ambientes Sedimentarios", horas: 128, anio: 3, cuatri: 1, area: "geo", correl: ["fse"] },
-		{ id: "pinv", nombre: "Paleontología de Invertebrados", horas: 160, anio: 3, cuatri: 1, area: "paleo", correl: ["paleo"],
+		{ id: "as", nombre: "Ambientes Sedimentarios", horas: 128, anio: 4, cuatri: 1, area: "geo", correl: ["fse"] },
+		{ id: "pinv", nombre: "Paleontología de Invertebrados", horas: 160, anio: 4, cuatri: 1, area: "paleo", correl: ["paleo"],
 			programa: "archivos/programas/paleontologia-de-invertebrados.pdf" },
-		{ id: "micro", nombre: "Fundamentos de Micropaleontología", corto: "Fund. de Micropaleontología", horas: 160, anio: 3, cuatri: 2, area: "paleo", correl: ["paleo"] },
-		{ id: "vert", nombre: "Vertebrados", horas: 160, anio: 3, cuatri: 2, area: "bio", correl: ["ba"],
+		{ id: "micro", nombre: "Fundamentos de Micropaleontología", corto: "Fund. de Micropaleontología", horas: 160, anio: 4, cuatri: 2, area: "paleo", correl: ["paleo"] },
+		{ id: "vert", nombre: "Vertebrados", horas: 160, anio: 4, cuatri: 2, area: "bio", correl: ["ba"],
 			programa: "archivos/programas/vertebrados.pdf" },
-		{ id: "gen", nombre: "Genética General para Paleontólogos", corto: "Genética General", horas: 110, anio: 3, cuatri: 2, area: "bio", correl: ["ibm", "biom"],
+		{ id: "gen", nombre: "Genética General para Paleontólogos", corto: "Genética General", horas: 110, anio: 4, cuatri: 2, area: "bio", correl: ["ibm", "biom"],
 			programa: "archivos/programas/genetica-general.pdf", nota: "Se otorga por equivalencia a quienes aprueben Genética I del plan de Biología (Res. CD 114/2006)." },
 
 		// ---- Cuarto año ----
-		{ id: "evo", nombre: "Evolución para Paleontólogos", corto: "Evolución", horas: 90, anio: 4, cuatri: 1, area: "bio", correl: ["gen"],
+		{ id: "evo", nombre: "Evolución para Paleontólogos", corto: "Evolución", horas: 90, anio: 5, cuatri: 1, area: "bio", correl: ["gen"],
 			programa: "archivos/programas/evolucion.pdf", nota: "Quienes aprueben Evolución de la carrera de Biología obtienen la equivalencia." },
-		{ id: "pvert", nombre: "Paleontología de Vertebrados", horas: 160, anio: 4, cuatri: 2, area: "paleo", correl: ["paleo", "vert"],
+		{ id: "pvert", nombre: "Paleontología de Vertebrados", horas: 160, anio: 5, cuatri: 2, area: "paleo", correl: ["paleo", "vert"],
 			programa: "archivos/programas/paleontologia-de-vertebrados.pdf" },
-		{ id: "bioest", nombre: "Bioestratigrafía", horas: 128, anio: 4, cuatri: 2, area: "paleo", correl: ["paleo"] }
+		{ id: "bioest", nombre: "Bioestratigrafía", horas: 128, anio: 5, cuatri: 2, area: "paleo", correl: ["paleo"] }
 	],
 	// Bloques que no son materias puntuales (se muestran en el diagrama con otro estilo)
 	bloques: [
-		{ id: "opt4", nombre: "Optativas y electivas", anio: 4, cuatri: 1, texto: "Ciclo de orientación: 800 créditos en total entre 4.º y 5.º año." },
-		{ id: "opt5", nombre: "Optativas y electivas", anio: 5, cuatri: 1, texto: "Ciclo de orientación: 800 créditos en total entre 4.º y 5.º año." },
-		{ id: "tesis", nombre: "Tesis de Licenciatura", horas: 160, anio: 5, cuatri: 2, texto: "Se puede iniciar con los trabajos prácticos de todas las materias del ciclo obligatorio aprobados." }
+		{ id: "opt4", nombre: "Optativas y electivas", anio: 5, cuatri: 1, texto: "Ciclo de orientación: 800 créditos en total entre 5.º y 6.º año." },
+		{ id: "opt5", nombre: "Optativas y electivas", anio: 6, cuatri: 1, texto: "Ciclo de orientación: 800 créditos en total entre 5.º y 6.º año." },
+		{ id: "tesis", nombre: "Tesis de Licenciatura", horas: 160, anio: 6, cuatri: 2, texto: "Se puede iniciar con los trabajos prácticos de todas las materias del ciclo obligatorio aprobados." }
 	],
 	// Orden de las materias dentro de cada cuatrimestre en el diagrama (izquierda a derecha)
 	layout: {
-		"1-1": ["ibm", "icao", "bv"], "1-2": ["ba", "gg", "fis"],
-		"2-1": ["biom", "paleo"],     "2-2": ["pbot", "fse", "qg"],
-		"3-1": ["qo", "as", "pinv"],  "3-2": ["micro", "vert", "gen"],
-		"4-1": ["opt4", "evo"],       "4-2": ["pvert", "bioest"],
-		"5-1": ["opt5"],              "5-2": ["tesis"]
+		"2-1": ["ibm", "icao", "bv"], "2-2": ["ba", "gg", "fis"],
+		"3-1": ["biom", "paleo"],     "3-2": ["pbot", "fse", "qg"],
+		"4-1": ["qo", "as", "pinv"],  "4-2": ["micro", "vert", "gen"],
+		"5-1": ["opt4", "evo"],       "5-2": ["pvert", "bioest"],
+		"6-1": ["opt5"],              "6-2": ["tesis"]
 	}
 };
 
 (function () {
 	"use strict";
 	var SVGNS = "http://www.w3.org/2000/svg";
-	var ORD = ["", "Primer", "Segundo", "Tercer", "Cuarto", "Quinto"];
+	var ORD = ["", "Primer", "Segundo", "Tercer", "Cuarto", "Quinto", "Sexto"];
 	var byId = {};
 	PLAN.materias.forEach(function (m) { byId[m.id] = m; });
 	PLAN.bloques.forEach(function (b) { byId[b.id] = b; b.bloque = true; });
@@ -130,7 +130,7 @@ var PLAN = {
 			if (a > 0) {
 				if (a % 2 === 1) el("rect", { x: 0, y: y - 16, width: W, height: ROW_H, rx: 12, "class": "row-band" }, gBands);
 				var t = el("text", { x: 6, y: y + NH / 2 + 5, "class": "row-label" }, gBands);
-				t.textContent = a + ".º año";
+				t.textContent = (a + 1) + ".º año";
 			}
 		}
 		[["1.º cuatrimestre", LABEL_W + halfW / 2], ["2.º cuatrimestre", LABEL_W + halfW + HALF_GAP + halfW / 2]].forEach(function (c) {
@@ -144,10 +144,12 @@ var PLAN = {
 			var x0 = LABEL_W + (cu === 2 ? halfW + HALF_GAP : 0);
 			var offset = (3 - ids.length) * SLOT / 2; // centrar si hay menos de 3
 			ids.forEach(function (id, i) {
-				pos[id] = { x: x0 + offset + i * SLOT + (SLOT - NW) / 2, y: TOP + (anio - 1) * ROW_H + 20, anio: anio, cuatri: cu };
+				pos[id] = { x: x0 + offset + i * SLOT + (SLOT - NW) / 2, y: TOP + (anio - 2) * ROW_H + 20, anio: anio, cuatri: cu };
 			});
 		});
 		pos.cbc = { x: W / 2 - 50, y: 6, w: 100, h: 34 };
+		var tc = el("text", { x: 6, y: 6 + 34 / 2 + 5, "class": "row-label" }, gBands);
+		tc.textContent = "1.º año";
 
 		// Aristas
 		var gEdges = el("g", {}, svg);
@@ -278,7 +280,7 @@ var PLAN = {
 	var table = document.getElementById("plan-table");
 	if (table) {
 		var html = "";
-		for (var anio = 1; anio <= 5; anio++) {
+		for (var anio = 2; anio <= 6; anio++) {
 			var delAnio = PLAN.materias.filter(function (m) { return m.anio === anio; });
 			var horas = delAnio.reduce(function (s, m) { return s + m.horas; }, 0);
 			html += "<div class='year-block reveal'><h3>" + ORD[anio] + " año" + (horas ? " <small>" + horas + " horas de materias obligatorias</small>" : "") + "</h3>";
