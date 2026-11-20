@@ -433,6 +433,7 @@ a.card { text-decoration: none; color: inherit; display: block; }
 	background: var(--sand); color: var(--terracotta-dark); font: italic 600 1.1rem/1 var(--font-display);
 }
 .person--titular .person__avatar { background: var(--terracotta); color: var(--white); }
+.person__avatar--photo { object-fit: cover; padding: 0; background: var(--sand); box-shadow: 0 0 0 2px var(--terracotta); }
 .person b { display: block; font-weight: 600; line-height: 1.25; }
 .person small { color: var(--ink-soft); font-size: .82rem; }
 .person--lead { border-color: var(--terracotta); }
