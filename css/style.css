@@ -261,6 +261,17 @@ section { position: relative; }
 	.hero .hero__credit { left: 12px; right: 12px; text-align: center; font-size: .62rem; }
 }
 
+/* Retrato chico centrado sobre un panel (fotos de baja resolución) */
+.figure-portrait {
+	margin: 0; aspect-ratio: 4 / 3; border-radius: var(--radius); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+	background: repeating-linear-gradient(176deg, transparent 0 34px, rgba(0,0,0,.035) 34px 36px), linear-gradient(160deg, #f6ecd9, var(--sand-strong));
+}
+.figure-portrait img { width: 170px; height: auto; border-radius: 4px; box-shadow: 0 10px 24px -12px rgba(42,33,28,.6); border: 5px solid var(--white); }
+.figure-portrait figcaption { text-align: center; }
+.figure-portrait b { display: block; font-family: var(--font-display); font-size: 1.2rem; color: var(--slate); }
+.figure-portrait small { font-size: .72rem; color: var(--ink-soft); }
+.figure-portrait a { color: inherit; }
+
 /* Foto ancha debajo del título de una página */
 .photo-banner { padding: 0 0 40px; }
 .figure-banner { margin: 0; }
