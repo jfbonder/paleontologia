@@ -274,6 +274,19 @@ section { position: relative; }
 .figure-portrait--illus { gap: 10px; }
 .figure-portrait--illus img { width: auto; height: 74%; border: 0; border-radius: 6px; }
 
+/* Collage de fotos (2 × 2) */
+.collage { margin: 0; }
+.collage__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.collage__tile { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--sand); }
+.collage__tile img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .5s; }
+.collage__tile:hover img { transform: scale(1.05); }
+.collage__tile span {
+	position: absolute; left: 8px; bottom: 8px; padding: 3px 9px; border-radius: 3px;
+	background: rgba(42, 33, 28, .72); color: var(--white); font-size: .78rem; font-weight: 600; letter-spacing: .02em;
+}
+.collage figcaption { font-size: .72rem; color: var(--ink-soft); margin-top: 8px; line-height: 1.5; }
+.collage figcaption a { color: inherit; }
+
 /* Foto ancha debajo del título de una página */
 .photo-banner { padding: 0 0 40px; }
 .figure-banner { margin: 0; }
